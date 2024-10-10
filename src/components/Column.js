@@ -18,14 +18,14 @@ const Column = ({ title, tickets }) => {
   return (
     <div className="boardColumn">
       <div className="board-top">
-        {title=="Backlog" && <><img src={Backlog}/><span className="board-text"><p>Backlog</p><span><img src={add}></img><img src={dot_menu}></img></span></span></>}
-        {title=="Todo" && <><img src={Todo}/><span className="board-text"><p>Todo</p><span><img src={add}></img><img src={dot_menu}></img></span></span></>}
-        {title=="In progress" && <><img src={In_progress}/><span className="board-text"><p>In progress</p><span><img src={add}></img><img src={dot_menu}></img></span></span></>}
-        {title==0 && <><img src={no_priority}/><span className="board-text"><p>No Priority</p><span><img src={add}></img><img src={dot_menu}></img></span></span></>}
-        {title==1 && <><img src={low_priority}/><span className="board-text"><p>LowPriority</p><span><img src={add}></img><img src={dot_menu}></img></span></span></>}
-        {title==2 && <><img src={mid_priority}/><span className="board-text"><p>Medium Priority</p><span><img src={add}></img><img src={dot_menu}></img></span></span></>}
-        {title==3 && <><img src={high_priority}/><span className="board-text"><p>High Priority</p><span><img src={add}></img><img src={dot_menu}></img></span></span></>}
-        {title==4 && <><img src={urgent_priority}/><span className="board-text"><p>Urgent Priority</p><span><img src={add}></img><img src={dot_menu}></img></span></span></>}
+        {title==="Backlog" && <><img src={Backlog}/><span className="board-text"><p>Backlog</p><span><img src={add}></img><img src={dot_menu}></img></span></span></>}
+        {title==="Todo" && <><img src={Todo}/><span className="board-text"><p>Todo</p><span><img src={add}></img><img src={dot_menu}></img></span></span></>}
+        {title==="In progress" && <><img src={In_progress}/><span className="board-text"><p>In progress</p><span><img src={add}></img><img src={dot_menu}></img></span></span></>}
+        {title===0 && <><img src={no_priority}/><span className="board-text"><p>No Priority</p><span><img src={add}></img><img src={dot_menu}></img></span></span></>}
+        {title===1 && <><img src={low_priority}/><span className="board-text"><p>LowPriority</p><span><img src={add}></img><img src={dot_menu}></img></span></span></>}
+        {title===2 && <><img src={mid_priority}/><span className="board-text"><p>Medium Priority</p><span><img src={add}></img><img src={dot_menu}></img></span></span></>}
+        {title===3 && <><img src={high_priority}/><span className="board-text"><p>High Priority</p><span><img src={add}></img><img src={dot_menu}></img></span></span></>}
+        {title===4 && <><img src={urgent_priority}/><span className="board-text"><p>Urgent Priority</p><span><img src={add}></img><img src={dot_menu}></img></span></span></>}
         
       </div>
 

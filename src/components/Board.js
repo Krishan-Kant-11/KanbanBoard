@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { fetchTickets } from "./apifetch";
 import Column from "./Column";
-import { Select, Button } from "antd";
+import { Select } from "antd";
 import "antd/dist/reset.css";
 import "./Board.css";
 

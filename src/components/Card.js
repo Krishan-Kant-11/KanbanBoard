@@ -10,11 +10,7 @@ import urgent_priority from "../assets/SVG - Urgent Priority grey.svg"
 
 import "./Card.css"
 
-import {
-  CheckCircleOutlined,
-  ExclamationCircleOutlined,
-  UserOutlined,
-} from "@ant-design/icons";
+
 
 function CardComponent({ id, title, tag, userId, status, priority}) {
   return (
@@ -31,11 +27,11 @@ function CardComponent({ id, title, tag, userId, status, priority}) {
 
       <div className="card-bottom">
         <span className="card-priority">
-          {priority==0 && <img src={no_priority}/>}
-          {priority==1 && <img src={low_priority}/>}
-          {priority==2 && <img src={mid_priority}/>}
-          {priority==3 && <img src={high_priority}/>}
-          {priority==4 && <img src={urgent_priority}/>}
+          {priority===0 && <img src={no_priority}/>}
+          {priority===1 && <img src={low_priority}/>}
+          {priority===2 && <img src={mid_priority}/>}
+          {priority===3 && <img src={high_priority}/>}
+          {priority===4 && <img src={urgent_priority}/>}
         </span>
         <p>{tag}</p>
       </div>
