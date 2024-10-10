@@ -1,21 +1,22 @@
 .kanban-board {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;  /* Changed from center to flex-start */
+    align-items: flex-start;
     padding: 20px;
-    position: relative;  /* Added to establish a positioning context */
+    width: 100%;
+    position: relative;
 }
 
 .options-wrapper {
     position: absolute;
     top: 1%;
-    left: 3%;  /* Adjust as needed */
-    z-index: 1000;  /* Ensure it's above other elements */
+    left: 3%;
+    z-index: 1000;
 }
 
 .options {
     display: flex;
-    flex-direction: column;  /* Changed to column layout */
+    flex-direction: column;
     gap: 10px;
     background-color: white;
     border: 1px solid #e0e0e0;
@@ -26,23 +27,65 @@
 }
 
 .options > * {
-    width: 100%;  /* Make children take full width */
+    width: 100%;
 }
 
-.options-box{
+.options-box {
     display: flex;
-    padding-left: 10px;
-    padding-right: 10px;
-    gap:20px;
+    gap: 20px;
+    padding: 0 10px;
 }
 
-.options-box >span{
+.options-box > span {
     color: grey;
 }
 
 .board-columns {
     display: flex;
     gap: 10px;
-    margin-top: 0px;  /* Add some top margin to account for the floating options */
-    width: 100%;  /* Ensure columns take full width */
+    flex-wrap: wrap;
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+/* Medium screens */
+@media (max-width: 768px) {
+    .options-wrapper {
+        top: 2%;
+        left: 2%;
+        width: 90%;
+    }
+    
+    .options {
+        width: 100%;
+    }
+
+    .board-columns {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+}
+
+/* Small screens */
+@media (max-width: 480px) {
+    .options-wrapper {
+        position: relative;
+        width: 100%;
+        padding-bottom: 20px;
+    }
+
+    .options {
+        width: 100%;
+    }
+
+    .options-box {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .board-columns {
+        flex-direction: column;
+        gap: 20px;
+    }
 }

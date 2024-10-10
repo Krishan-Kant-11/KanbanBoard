@@ -14,19 +14,120 @@ import high_priority from "../assets/Img - High Priority.svg"
 import urgent_priority from "../assets/SVG - Urgent Priority colour.svg"
 
 const Column = ({ title, tickets }) => {
-  console.log(title);
+  // Map numeric priorities to corresponding string values
+  const titleMapping = {
+    0: "No Priority",
+    1: "Low Priority",
+    2: "Medium Priority",
+    3: "High Priority",
+    4: "Urgent Priority",
+    "Backlog": "Backlog",
+    "Todo": "Todo",
+    "In progress": "In progress"
+  };
+
+  // Use mapped title if numeric
+  const displayTitle = titleMapping[title] || title;
+
   return (
     <div className="boardColumn">
       <div className="board-top">
-        {title==="Backlog" && <><img src={Backlog} alt="img"/><span className="board-text"><p>Backlog</p><span><img src={add} alt="img"></img><img src={dot_menu} alt="img"></img></span></span></>}
-        {title==="Todo" && <><img src={Todo} alt="img"/><span className="board-text"><p>Todo</p><span><img src={add} alt="img"></img><img src={dot_menu} alt="img"></img></span></span></>}
-        {title==="In progress" && <><img src={In_progress} alt="img"/><span className="board-text"><p>In progress</p><span><img src={add} alt="img"></img><img src={dot_menu} alt="img"></img></span></span></>}
-        {title===0 && <><img src={no_priority} alt="img"/><span className="board-text"><p>No Priority</p><span><img src={add} alt="img"></img><img src={dot_menu} alt="img"></img></span></span></>}
-        {title===1 && <><img src={low_priority} alt="img"/><span className="board-text"><p>LowPriority</p><span><img src={add} alt="img"></img><img src={dot_menu} alt="img"></img></span></span></>}
-        {title===2 && <><img src={mid_priority} alt="img"/><span className="board-text"><p>Medium Priority</p><span><img src={add} alt="img"></img><img src={dot_menu} alt="img"></img></span></span></>}
-        {title===3 && <><img src={high_priority} alt="img"/><span className="board-text"><p>High Priority</p><span><img src={add} alt="img"></img><img src={dot_menu} alt="img"></img></span></span></>}
-        {title===4 && <><img src={urgent_priority} alt="img"/><span className="board-text"><p>Urgent Priority</p><span><img src={add} alt="img"></img><img src={dot_menu} alt="img"></img></span></span></>}
-        
+        {displayTitle === "Backlog" && (
+          <>
+            <img src={Backlog} alt="Backlog" />
+            <span className="board-text">
+              <p>Backlog</p>
+              <span>
+                <img src={add} alt="add" />
+                <img src={dot_menu} alt="menu" />
+              </span>
+            </span>
+          </>
+        )}
+        {displayTitle === "Todo" && (
+          <>
+            <img src={Todo} alt="Todo" />
+            <span className="board-text">
+              <p>Todo</p>
+              <span>
+                <img src={add} alt="add" />
+                <img src={dot_menu} alt="menu" />
+              </span>
+            </span>
+          </>
+        )}
+        {displayTitle === "In progress" && (
+          <>
+            <img src={In_progress} alt="In progress" />
+            <span className="board-text">
+              <p>In progress</p>
+              <span>
+                <img src={add} alt="add" />
+                <img src={dot_menu} alt="menu" />
+              </span>
+            </span>
+          </>
+        )}
+        {displayTitle === "No Priority" && (
+          <>
+            <img src={no_priority} alt="No Priority" />
+            <span className="board-text">
+              <p>No Priority</p>
+              <span>
+                <img src={add} alt="add" />
+                <img src={dot_menu} alt="menu" />
+              </span>
+            </span>
+          </>
+        )}
+        {displayTitle === "Low Priority" && (
+          <>
+            <img src={low_priority} alt="Low Priority" />
+            <span className="board-text">
+              <p>Low Priority</p>
+              <span>
+                <img src={add} alt="add" />
+                <img src={dot_menu} alt="menu" />
+              </span>
+            </span>
+          </>
+        )}
+        {displayTitle === "Medium Priority" && (
+          <>
+            <img src={mid_priority} alt="Medium Priority" />
+            <span className="board-text">
+              <p>Medium Priority</p>
+              <span>
+                <img src={add} alt="add" />
+                <img src={dot_menu} alt="menu" />
+              </span>
+            </span>
+          </>
+        )}
+        {displayTitle === "High Priority" && (
+          <>
+            <img src={high_priority} alt="High Priority" />
+            <span className="board-text">
+              <p>High Priority</p>
+              <span>
+                <img src={add} alt="add" />
+                <img src={dot_menu} alt="menu" />
+              </span>
+            </span>
+          </>
+        )}
+        {displayTitle === "Urgent Priority" && (
+          <>
+            <img src={urgent_priority} alt="Urgent Priority" />
+            <span className="board-text">
+              <p>Urgent Priority</p>
+              <span>
+                <img src={add} alt="add" />
+                <img src={dot_menu} alt="menu" />
+              </span>
+            </span>
+          </>
+        )}
       </div>
 
       {tickets.map((ticket) => (
@@ -37,3 +138,4 @@ const Column = ({ title, tickets }) => {
 };
 
 export default Column;
+
