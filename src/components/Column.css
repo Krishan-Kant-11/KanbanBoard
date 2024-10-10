@@ -10,6 +10,7 @@
     margin: 10px;
     /* border: solid red 2px; */
     align-items: center;
+    max-width: 500px;
 }
 
 .board-top > span {
