@@ -1,0 +1,48 @@
+.kanban-board {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;  /* Changed from center to flex-start */
+    padding: 20px;
+    position: relative;  /* Added to establish a positioning context */
+}
+
+.options-wrapper {
+    position: absolute;
+    top: 1%;
+    left: 3%;  /* Adjust as needed */
+    z-index: 1000;  /* Ensure it's above other elements */
+}
+
+.options {
+    display: flex;
+    flex-direction: column;  /* Changed to column layout */
+    gap: 10px;
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 10px;
+    width: 250px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.options > * {
+    width: 100%;  /* Make children take full width */
+}
+
+.options-box{
+    display: flex;
+    padding-left: 10px;
+    padding-right: 10px;
+    gap:20px;
+}
+
+.options-box >span{
+    color: grey;
+}
+
+.board-columns {
+    display: flex;
+    gap: 10px;
+    margin-top: 0px;  /* Add some top margin to account for the floating options */
+    width: 100%;  /* Ensure columns take full width */
+}

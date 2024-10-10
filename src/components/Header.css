@@ -1,0 +1,24 @@
+.header{
+    display: flex;
+    align-items: center;
+}
+
+.display-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 2px rgba(0, 0, 0, 0.2);
+    margin-left: 3%;
+    /* height: 80%; */
+    gap:8px;
+    padding: 5px;
+    padding-left: 15px;
+    border-radius: 5px;
+    color: rgb(68, 68, 68);
+}
+
+.arrow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

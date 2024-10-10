@@ -1,0 +1,49 @@
+.boardColumn {
+    flex: 1;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.board-top {
+    display: flex;
+    margin: 10px;
+    /* border: solid red 2px; */
+    align-items: center;
+}
+
+.board-top > span {
+    margin: 10px;
+}
+
+.board-top > img {
+    display: flex;
+    align-items: flex-start;
+    /* border: 2px red solid; */
+    height: 100%;
+}
+
+.board-text {
+    /* border: 2px red solid; */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.board-text > p {
+    margin: 0; /* Remove default margin */
+    display: flex;
+    align-items: center; /* Center vertically */
+    height: 100%; /* Ensure full height */
+    /* border: 2px solid black; */
+}
+
+.board-text > span {
+    display: flex;
+    align-items: center; /* Center the icons vertically */
+}
+
+.board-text > span > img {
+    margin-left: 5px; /* Add some space between icons */
+}
