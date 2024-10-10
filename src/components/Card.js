@@ -27,11 +27,11 @@ function CardComponent({ id, title, tag, userId, status, priority}) {
 
       <div className="card-bottom">
         <span className="card-priority">
-          {priority===0 && <img src={no_priority}/>}
-          {priority===1 && <img src={low_priority}/>}
-          {priority===2 && <img src={mid_priority}/>}
-          {priority===3 && <img src={high_priority}/>}
-          {priority===4 && <img src={urgent_priority}/>}
+          {priority===0 && <img src={no_priority} alt="img"/>}
+          {priority===1 && <img src={low_priority} alt="img"/>}
+          {priority===2 && <img src={mid_priority} alt="img"/>}
+          {priority===3 && <img src={high_priority} alt="img"/>}
+          {priority===4 && <img src={urgent_priority} alt="img"/>}
         </span>
         <p>{tag}</p>
       </div>
